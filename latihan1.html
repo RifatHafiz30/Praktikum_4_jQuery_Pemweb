@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Tag sebagai identifikasi bahwa java script yang digunakan adalah Jquery-->
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+		//elemen jquery untuk menampilkan dan menyembunyikan gambar
+		$(document).ready(function(){
+			$(".sembunyi1").click(function(){$("#foto1").hide("slow") });
+			$(".tampil1").click(function(){$("#foto1").show("slow") });
+			$(".sembunyi2").click(function(){$("#foto2").hide("slow") });
+			$(".tampil2").click(function(){$("#foto2").show("slow") });
+			});
+	</script>
+	<!--Script CSS untuk menata tabel dan gambar-->
+	<style type="text/css">
+		tr{
+			text-align: center;
+		}
+		img{
+			float: left;
+			padding-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<!--tag untuk membuat tabel-->
+	<table>
+		<!--tag untuk button-->
+		<tr>
+			<td><button class="sembunyi1">Sembunyikan Foto1</button></td>
+			<td><button class="tampil1">Tampilan Foto1</button></td>
+		</tr>
+		<!--tag untuk memunculkan gambar-->
+		<tr>
+			<td><button class="sembunyi2">Sembunyikan Foto2</button></td>
+			<td><button class="tampil2">Tampilkan Foto2</button></td>
+		</tr>
+		<tr>
+			<td><p><img id="foto1" src="r1.JPG" width="300px" height="200px"></p></td>
+			<td><p><img id="foto2" src="f1.JPG" width="300px" height="200px"></p></td>
+		</tr>
+	</table>
+</body>
+</html>
